@@ -1,0 +1,216 @@
+/* RESET BÁSICO Y PROPIEDADES GLOBALES */
+html {
+    /* PROPIEDAD PARA COMPLEMENTAR EL SMOOTH SCROLLING DE JS */
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ESTILOS DE LA CABECERA Y NAVEGACIÓN */
+header {
+    background-color: #C0392B; /* Rojo intenso - color asociado a Chile */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #E74C3C; /* Rojo más claro al pasar el mouse */
+}
+
+/* SECCIONES Y CONTENEDOR GENERAL */
+.content-section {
+    padding: 40px 10%;
+    text-align: center;
+}
+
+.grey-bg {
+    background-color: #ecf0f1;
+}
+
+.content-section h2 {
+    color: #C0392B;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+/* ESTILO HERO (INICIO) */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px 10%;
+    background-color: #34495E; /* Azul oscuro */
+    color: white;
+}
+
+.hero img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content h2 {
+    color: white;
+    font-style: italic;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+/* ESTILO BIOGRAFÍA */
+.bio-grid {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.bio-grid img {
+    max-width: 300px;
+    border-radius: 50%; /* Imagen redonda */
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ESTILO OBRAS (CARDS) */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.obra-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 220px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.obra-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.obra-card img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+/* ESTILO LOGROS */
+.logro-content {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.logro-item {
+    width: 250px;
+    padding: 20px;
+    border: 2px solid #C0392B;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.logro-item h3 {
+    margin-top: 0;
+    color: #C0392B;
+}
+
+.logro-item .year {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #2980B9; /* Azul más frío */
+}
+
+/* ESTILO GALERÍA */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: transform 0.3s;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+
+/* MEDIA QUERIES para responsividad en móviles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 40px 5%;
+    }
+
+    .bio-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logro-content, .image-gallery {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .image-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .logro-item {
+        width: 100%;
+    }
+}
